@@ -1,4 +1,5 @@
-# AILedger Charter
+# Charting a Course
+### The AILedger Charter
 
 This repository is the canonical source-of-truth for the **AILedger Charter** — the public commitment document that governs how AILedger operates.
 
