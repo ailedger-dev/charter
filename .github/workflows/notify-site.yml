@@ -1,0 +1,36 @@
+name: Notify site
+
+# When charter content changes on main, kick the site repo
+# (ailedger-dev/ailedger) so it rebuilds and republishes ailedger.dev/charter.
+# Without this, the site only re-fetches CHARTER.md when something else lands
+# on the site repo's main, so a charter edit can sit unpublished indefinitely.
+#
+# Requires repo secret SITE_DISPATCH_TOKEN — a PAT (fine-grained or classic)
+# with `contents: write` / `repo` scope on ailedger-dev/ailedger. GITHUB_TOKEN
+# can't cross repo boundaries.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'CHARTER.md'
+      - 'STANDARDS.md'
+      - 'ACCESS.md'
+      - '.github/workflows/notify-site.yml'
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger site rebuild
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.SITE_DISPATCH_TOKEN }}
+          repository: ailedger-dev/ailedger
+          event-type: charter-updated
+          client-payload: |
+            {
+              "sha": "${{ github.sha }}",
+              "ref": "${{ github.ref }}",
+              "message": ${{ toJSON(github.event.head_commit.message) }}
+            }
