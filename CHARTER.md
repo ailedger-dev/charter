@@ -73,3 +73,5 @@ This section is informational. The principles, refused-customer categories, refu
 - **v1.3 (2026-05-27):** Added Scope section between Purpose and Working as intended, clarifying that AILedger sits at the audit layer of AI-influenced decisions, not the decision layer or the remediation layer.
 - **v1.2 (2026-05-20):** Added Regulatory context section reflecting the May 7, 2026 Digital Omnibus political agreement. Non-substantive update; no principle changes.
 - **v1.1 (2026-05-18):** Jake-authored rewrite. Restructured into Purpose / Working as intended / Failure mode / Customers we refuse / Features we won't build / Decisions requiring board review / Exit conditions / Public commitment / Review cadence.
+
+<!-- CI smoke test 2026-05-28: confirm notify-site Actions flow fires on CHARTER.md change. No-op marker. -->
