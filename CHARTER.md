@@ -1,8 +1,8 @@
-# AILedger Charter — v1.3
+# AILedger Charter — v1.4
 
 ## Purpose
 
-AILedger exists to make AI systems in regulated industries auditable in ways that catch actual harm to real people. Not to generate paperwork that satisfies regulators while harm continues.
+AILedger makes AI-influenced decisions in regulated industries provable — so customers, regulators, and courts can see what a system did and verify it. The rule we build to is simple: an audit trail is only worth paying for if it catches what actually went wrong. Paperwork that passes a regulator while the problem continues helps no one, so we don't build it.
 
 ## Scope: what AILedger does and does not do
 
@@ -12,17 +12,19 @@ AILedger sits at the audit layer of AI-influenced decisions, not the decision la
 - **Reporting (yes):** Produce structured Decision Event records, Integrity Chain verifications, and statistical findings as audit-grade evidence usable by customers, regulators, and adversarial reviewers.
 - **Remediation (no, by design):** AILedger does not propose, recommend, or implement remediation for the AI behavior it detects. Remediation is the customer's responsibility, executed by their compliance, legal, and regulatory counsel. This separation is structural: an audit substrate that also remediated would mean customers grading their own work, which is exactly the audit theater this Charter exists to prevent.
 
-AILedger facilitates accountability. It does not absolve it.
+AILedger facilitates accountability. It does not absolve it. Where a customer needs formal certification, AILedger supports certification partners with evidence; it does not itself certify.
 
 ## Working as intended
 
-Users of AILedger detect bias, drift, and disparate impact in their AI systems before regulators or lawsuits do. Affected populations - job applicants, loan applicants, patients, students - experience fewer AI-caused harms because the systems affecting them are monitored substantively. Regulators trust AILedger output (Detection Events, Integrity Chain verifications, Witnessed Inferences) as evidence in enforcement actions.
+Customers detect bias, drift, and disparate impact in their own systems before regulators or plaintiffs do — early, internally, where issues are cheapest to fix. The populations those systems act on are treated more consistently, and customers carry less regulatory and litigation risk. Regulators and adversarial reviewers treat AILedger output — Decision Events, Integrity Chain verifications, Witnessed Inferences — as evidence. That credibility is the product, and it is what customers pay for.
 
 ## Failure mode
 
-Customers use AILedger Detection Events, Integrity Chain verifications, and Witnessed Inferences as legal cover. Audit trails are intact and meaningless. Detection thresholds are configured to suppress findings. The product becomes shorthand for "we have a compliance tool" without changing AI behavior. Affected populations are harmed at the same or higher rates because the regulatory pressure that would have forced change is absorbed by the appearance of compliance.
+A product like this fails by becoming theater: audit trails intact and meaningless, thresholds tuned to suppress findings, "we have a compliance tool" standing in for any real change. When that happens the customer ends up more exposed, not less — the appearance of compliance is the first thing a regulator takes apart, and the record AILedger produced becomes the evidence used against them. AILedger is built to avoid this because defensibility is the entire value of the product.
 
-## Customers we refuse
+## Use cases we decline
+
+AILedger sells across B2B and B2G. The list below is specific use cases — not sectors or company types:
 
 - Companies whose underlying AI use is itself the harm (predictive policing, social scoring, deceptive targeting of vulnerable populations)
 - Companies that request detection configurations specifically designed to suppress findings
@@ -42,7 +44,7 @@ Customers use AILedger Detection Events, Integrity Chain verifications, and Witn
 
 - Weakening any detection primitive below its launch sensitivity
 - Accepting a customer from a refused category
-- Subjective determinations of bad-faith use per Customers-we-refuse §4 (including but not limited to bad-faith litigation defense)
+- Subjective determinations of bad-faith use per Use-cases-we-decline §4 (including but not limited to bad-faith litigation defense)
 - Removing or making optional any required-action workflow
 - Acquisition offers or exit decisions that would change product direction
 - Any amendment to this charter (requires unanimous Board of Directors approval)
@@ -56,7 +58,7 @@ Customers use AILedger Detection Events, Integrity Chain verifications, and Witn
 
 ## Public commitment
 
-This charter is published from day one. Customers, regulators, and the public can hold AILedger accountable to it. Amendments are versioned publicly so changes are visible.
+This charter is published from day one. Customers, regulators, and the public can hold AILedger accountable to it. Amendments are versioned publicly so changes are visible. A commitment that can be revised quietly is worth nothing to the people relying on it; that is why the revision history is open.
 
 ## Review cadence
 
@@ -70,6 +72,7 @@ This section is informational. The principles, refused-customer categories, refu
 
 ## Change log
 
+- **v1.4 (2026-05-30):** Editorial revision for plainer, more commercial language (KIS), plus two clarifications: (1) a lead line on Customers-we-refuse stating that AILedger sells across B2B and B2G and declines specific use cases, not sectors or company types; (2) a line in Scope noting AILedger supports certification partners with evidence but does not itself certify; (3) renamed the "Customers we refuse" header to "Use cases we decline" (label only). No binding commitment changed — the four refused-customer categories, four refused-feature categories, board-review triggers, exit conditions, STANDARDS-anchoring rule, and amendment procedure are unchanged in force and wording. Minor textual revision per the amendment procedure.
 - **v1.3 (2026-05-27):** Added Scope section between Purpose and Working as intended, clarifying that AILedger sits at the audit layer of AI-influenced decisions, not the decision layer or the remediation layer.
 - **v1.2 (2026-05-20):** Added Regulatory context section reflecting the May 7, 2026 Digital Omnibus political agreement. Non-substantive update; no principle changes.
 - **v1.1 (2026-05-18):** Jake-authored rewrite. Restructured into Purpose / Working as intended / Failure mode / Customers we refuse / Features we won't build / Decisions requiring board review / Exit conditions / Public commitment / Review cadence.
